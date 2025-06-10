@@ -35,15 +35,34 @@ public class GerenciadorDeTarefas {
     }
 
     public List<Tarefa> listarTodasAsTarefas() {
-        return null;
+        List<Tarefa> todasAsTarefas = new ArrayList<>();
+
+        for (Tarefa t : this.tarefas) {
+            todasAsTarefas.add(t);
+        }
+        return todasAsTarefas;
     }
 
     public List<Tarefa> listarTarefasPendentes() {
-        return null;
+        List<Tarefa> tarefasPendentes = new ArrayList<>();
+
+        for (Tarefa t : this.tarefas) {
+            if (!t.isConcluida()) {
+                tarefasPendentes.add(t);
+            }
+        }
+        return tarefasPendentes;
     }
 
     public  List<Tarefa> listarTarefasConcluidas() {
-        return null;
+        List<Tarefa> tarefasConcluidas = new ArrayList<>();
+
+        for (Tarefa t : this.tarefas) {
+            if (t.isConcluida()) {
+                tarefasConcluidas.add(t);
+            }
+        }
+        return tarefasConcluidas;
     }
 
 }
