@@ -7,7 +7,9 @@ public class GerenciadorDeTarefas {
 
     private List<Tarefa> tarefas;
 
-    public GerenciadorDeTarefas(List<Tarefa> tarefas) {
+
+
+    public GerenciadorDeTarefas() {
         this.tarefas = new ArrayList<>();
     }
 
